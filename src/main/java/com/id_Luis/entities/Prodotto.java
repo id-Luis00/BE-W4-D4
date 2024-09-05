@@ -16,6 +16,7 @@ public abstract class Prodotto {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Setter(AccessLevel.NONE)
     protected Long id;
 
     protected String nome;
@@ -27,6 +28,7 @@ public abstract class Prodotto {
         this.cal = cal;
         this.prezzo = prezzo;
     }
+
     public Prodotto(String nome, int cal) {
         this.nome = nome;
         this.cal = cal;
